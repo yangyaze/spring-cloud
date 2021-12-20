@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: yang
+    password: root
+    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: user-service
+
+server:
+  port: 8081
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:10001/eureka/,http://peer2:10002/eureka/,http://peer3:10003/eureka/
